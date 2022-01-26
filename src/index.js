@@ -1,4 +1,6 @@
+import addProject from './addproject.js'
 import './style.css';
+
 
 let testFunction = () => {
     let el = document.createElement("div");
@@ -10,4 +12,6 @@ let testFunction = () => {
 };
 
 testFunction();
+
+addProject();
 
