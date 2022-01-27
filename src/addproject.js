@@ -3,7 +3,7 @@
 let addProject = () => {
     let element = document.createElement("div");
 
-    element.textContent = "first commit";
+    element.textContent = "branch commit";
     element.classList.add("hi");
 
     document.body.appendChild(element);
