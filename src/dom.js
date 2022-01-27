@@ -8,6 +8,11 @@ let dom = (() => {
         div.classList.add("project-div");
         div.textContent = title;
 
+        let deletebtn = document.createElement('button');
+        deletebtn.textContent = "X";
+        deletebtn.classList.add('delete-btn')
+
+        div.appendChild(deletebtn);
         
         return div;
     };
