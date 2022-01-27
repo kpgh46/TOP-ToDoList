@@ -13,6 +13,7 @@ header {
     font-weight: 700;
     padding-left: 10px;
     width: 1000px;
+    
 }
 
 .hi {
@@ -27,10 +28,11 @@ header {
 
 #left {
     width: 300px;
-    
     padding-left: 10px;
     display: flex;
-    /* align-items: flex-end; */
+    flex-direction: column;
+    margin-right: 20px;
+    background-color: #F4F4F4;
 }
 
 .headers {
@@ -45,6 +47,7 @@ header {
     width: 40px;
     border-radius: 40px;
     margin-top: 13px;
+    background-color: white;
 }
 
 #right .main-add-btn {
