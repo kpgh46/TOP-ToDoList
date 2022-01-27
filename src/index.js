@@ -5,7 +5,7 @@ import './style.css';
 let testFunction = () => {
     let el = document.createElement("div");
 
-    el.textContent = "sup";
+    el.textContent = "hola";
     el.classList.add("hi");
 
     document.body.appendChild(el);

@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\n\nlet addProject = () => {\n    let element = document.createElement(\"div\");\n\n    element.textContent = \"hey there\";\n    element.classList.add(\"hi\");\n\n    document.body.appendChild(element);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addProject);\n\n//# sourceURL=webpack://top-todolist/./src/addproject.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\n\nlet addProject = () => {\n    let element = document.createElement(\"div\");\n\n    element.textContent = \"first commit\";\n    element.classList.add(\"hi\");\n\n    document.body.appendChild(element);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addProject);\n\n//# sourceURL=webpack://top-todolist/./src/addproject.js?");
 
 /***/ }),
 
@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _addproject_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addproject.js */ \"./src/addproject.js\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\n\nlet testFunction = () => {\n    let el = document.createElement(\"div\");\n\n    el.textContent = \"sup\";\n    el.classList.add(\"hi\");\n\n    document.body.appendChild(el);\n};\n\ntestFunction();\n\n(0,_addproject_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n\n\n//# sourceURL=webpack://top-todolist/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _addproject_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addproject.js */ \"./src/addproject.js\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\n\nlet testFunction = () => {\n    let el = document.createElement(\"div\");\n\n    el.textContent = \"hola\";\n    el.classList.add(\"hi\");\n\n    document.body.appendChild(el);\n};\n\ntestFunction();\n\n(0,_addproject_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n\n\n//# sourceURL=webpack://top-todolist/./src/index.js?");
 
 /***/ })
 
