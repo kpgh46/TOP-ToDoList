@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\n\nlet addProject = () => {\n    let element = document.createElement(\"div\");\n\n    element.textContent = \"fourth blah blah commit\";\n    element.classList.add(\"hi\");\n\n    document.body.appendChild(element);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addProject);\n\n//# sourceURL=webpack://top-todolist/./src/addproject.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\n\nlet addProject = () => {\n    let element = document.createElement(\"div\");\n\n    element.textContent = \"new test commit\";\n    element.classList.add(\"hi\");\n\n    document.body.appendChild(element);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addProject);\n\n//# sourceURL=webpack://top-todolist/./src/addproject.js?");
 
 /***/ }),
 
