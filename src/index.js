@@ -1,17 +1,11 @@
-import addProject from './addproject.js'
 import './style.css';
+import { projectConstructor } from './projectConstructor';
+import { dom } from './dom.js';
+import { addProject, mainArr} from './addProject';
 
 
-let testFunction = () => {
-    let el = document.createElement("div");
-
-    el.textContent = "hola";
-    el.classList.add("hi");
-
-    document.body.appendChild(el);
-};
-
-testFunction();
-
-addProject();
-
+//Default Project
+let defaultProject = projectConstructor("Default");
+addProject.pushToMainArr(defaultProject);
+dom.render();
+//Default Project

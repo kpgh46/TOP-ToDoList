@@ -1,13 +1,13 @@
+let mainArr = [];
 
+let addProject = (() => {
+    
 
-let addProject = () => {
-    let element = document.createElement("div");
+    let pushToMainArr = (project) => {
+        mainArr.push(project);
+    };
 
-    element.textContent = "branch commit";
-    element.classList.add("hi");
+    return {pushToMainArr }
+})();
 
-    document.body.appendChild(element);
-};
-
-export default addProject
-
+export {addProject, mainArr};

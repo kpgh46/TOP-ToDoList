@@ -57,3 +57,12 @@ header {
     margin-top: 13px;
     margin-left: 540px;
 }
+
+.project-div {
+    height: 50px;
+    width: 100%;
+    border:1px solid black;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
