@@ -16,6 +16,6 @@ dom.render();
 //Add Project Button on main page
 document.addEventListener("click", (el) => {
     if (el.target.id === "add-project-btn"){
-        addProject.getProjectName();
+        addProject.addProjectToList();
     }
 })

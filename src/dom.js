@@ -3,6 +3,8 @@ import {addProject, mainArr} from './addProject';
 
 let dom = (() => {
 
+    let projectList = document.querySelector("#project-list");
+
     let createProjectDiv = (title) => {
         let div = document.createElement('div');
         div.classList.add("project-div");
@@ -18,11 +20,18 @@ let dom = (() => {
     };
 
     let appendProjectDiv = (div) => {
-        let left = document.querySelector("#left");
-        left.appendChild(div);
-    }
+
+        projectList.appendChild(div);
+    };
+
+    let clearPage = (el) => {
+        while (el.firstChild) {
+          el.removeChild(el.firstChild)
+        }
+      }
 
     let render = () => {
+        clearPage(projectList);
         mainArr.forEach(project => {
             dom.appendProjectDiv(dom.createProjectDiv(project.title))
         })
