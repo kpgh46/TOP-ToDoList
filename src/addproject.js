@@ -37,6 +37,7 @@ let addProject = (() => {
         pushToMainArr(newProject);
         resetInputValue(projectNameValue);
         dom.render();
+        
     }
 
     return {pushToMainArr, addProjectToList, checkIfEmpty, mainArr, resetInputValue}
