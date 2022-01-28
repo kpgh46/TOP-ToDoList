@@ -2,6 +2,7 @@ import './style.css';
 import { projectConstructor } from './projectConstructor';
 import { dom } from './dom.js';
 import { addProject, mainArr} from './addProject';
+import { deleteProject } from './deleteproject'
 
 //Default Project
 let defaultProject = projectConstructor("Default");
@@ -15,5 +16,11 @@ dom.render();
 document.addEventListener("click", (el) => {
     if (el.target.id === "add-project-btn"){
         addProject.addProjectToList();
+    }
+})
+
+document.addEventListener("click", (el) => {
+    if (el.target.id === "delete-project"){
+        deleteProject.getDataIDDelete(el);
     }
 })

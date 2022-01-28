@@ -15,6 +15,7 @@ let dom = (() => {
         deletebtn.textContent = "X";
         deletebtn.classList.add('delete-btn');
         deletebtn.dataset.id = id;
+        deletebtn.id = "delete-project";
 
         div.appendChild(deletebtn);
         
