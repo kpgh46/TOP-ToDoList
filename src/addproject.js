@@ -27,7 +27,9 @@ let addProject = (() => {
     }
     
     let pushToMainArr = (project) => {
+        if (project.title.length > 0){
         mainArr.push(project);
+        }
     };
 
     let addProjectToList = () => {
