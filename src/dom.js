@@ -5,14 +5,16 @@ let dom = (() => {
 
     let projectList = document.querySelector("#project-list");
 
-    let createProjectDiv = (title) => {
+    let createProjectDiv = (title, id) => {
         let div = document.createElement('div');
         div.classList.add("project-div");
         div.textContent = title;
+        div.dataset.id = id;
 
         let deletebtn = document.createElement('button');
         deletebtn.textContent = "X";
-        deletebtn.classList.add('delete-btn')
+        deletebtn.classList.add('delete-btn');
+        deletebtn.dataset.id = id;
 
         div.appendChild(deletebtn);
         
@@ -33,7 +35,7 @@ let dom = (() => {
     let render = () => {
         clearPage(projectList);
         addProject.mainArr.forEach(project => {
-            dom.appendProjectDiv(dom.createProjectDiv(project.title))
+            dom.appendProjectDiv(dom.createProjectDiv(project.title, project.id))
         })
     };
 
