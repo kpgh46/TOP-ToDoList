@@ -1,5 +1,5 @@
 
-import {addProject, mainArr} from './addProject';
+import {addProject} from './addProject';
 
 let dom = (() => {
 
@@ -32,7 +32,7 @@ let dom = (() => {
 
     let render = () => {
         clearPage(projectList);
-        mainArr.forEach(project => {
+        addProject.mainArr.forEach(project => {
             dom.appendProjectDiv(dom.createProjectDiv(project.title))
         })
     };
