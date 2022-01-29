@@ -7,6 +7,8 @@ import { deleteProject } from './deleteproject'
 //Default Project
 let defaultProject = projectConstructor("Default");
 addProject.pushToMainArr(defaultProject);
+
+
 dom.render();
 
 
@@ -21,6 +23,7 @@ document.addEventListener("click", (el) => {
 
 document.addEventListener("click", (el) => {
     if (el.target.id === "delete-project"){
-        deleteProject.deleteProjectDiv(el);
+        deleteProject.removeProject(el);
+        console.log(addProject.mainArr);
     }
 })

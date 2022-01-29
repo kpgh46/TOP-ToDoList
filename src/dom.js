@@ -10,6 +10,7 @@ let dom = (() => {
         div.classList.add("project-div");
         div.textContent = title;
         div.dataset.id = id;
+        addProject.currentID = id;
 
         let deletebtn = document.createElement('button');
         deletebtn.textContent = "X";
@@ -38,6 +39,7 @@ let dom = (() => {
         addProject.mainArr.forEach(project => {
             dom.appendProjectDiv(dom.createProjectDiv(project.title, project.id))
         })
+        
     };
 
     return {createProjectDiv, appendProjectDiv, render}

@@ -1,11 +1,10 @@
 import { projectConstructor } from './projectConstructor';
 import { dom } from './dom.js';
 
-
-
 let addProject = (() => {
     let projectNameValue = document.querySelector("#project-entry");
     let mainArr = [];
+    let currentID;
 
     let resetInputValue = (selector) => {
         selector.value = "";
@@ -35,12 +34,13 @@ let addProject = (() => {
     let addProjectToList = () => {
         let newProject = projectConstructor(getProjectName());
         pushToMainArr(newProject);
+        // currentID = newProject.id;
         resetInputValue(projectNameValue);
         dom.render();
         
     }
 
-    return {pushToMainArr, addProjectToList, checkIfEmpty, mainArr, resetInputValue}
+    return {pushToMainArr, addProjectToList, checkIfEmpty, mainArr, resetInputValue, currentID}
 })();
 
 export {addProject};
