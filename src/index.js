@@ -21,6 +21,6 @@ document.addEventListener("click", (el) => {
 
 document.addEventListener("click", (el) => {
     if (el.target.id === "delete-project"){
-        deleteProject.getDataIDDelete(el);
+        deleteProject.deleteProjectDiv(el);
     }
 })
