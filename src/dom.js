@@ -34,7 +34,7 @@ let dom = (() => {
         }
       }
 
-    let render = () => {
+    let render = () => {    
         clearPage(projectList);
         addProject.mainArr.forEach(project => {
             dom.appendProjectDiv(dom.createProjectDiv(project.title, project.id))

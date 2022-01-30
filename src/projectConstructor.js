@@ -1,6 +1,6 @@
-let projectConstructor = (title, description, dueDate, priority, id, tasks) => {
+let projectConstructor = (title, id, tasks) => {
     tasks = [];
-    return {title, description,dueDate,priority, id:Date.now(), tasks}
+    return {title, id:Date.now(), tasks}
 }
 
 export {projectConstructor};

@@ -6,10 +6,13 @@ import { deleteProject } from './deleteproject'
 
 //Default Project
 let defaultProject = projectConstructor("Default");
+defaultProject.tasks.push({task: "Yard Work", description: "cut the grass", duedate: "today", priority: "medium", completed: "no"})
+defaultProject.tasks.push({task: "Grocery", description: "pick up food and cook", duedate: "this weekend", priority: "high", completed: "yes"})
 addProject.pushToMainArr(defaultProject);
 
 
 dom.render();
+console.log(addProject.mainArr)
 
 
 //All Event Listeners
@@ -24,6 +27,6 @@ document.addEventListener("click", (el) => {
 document.addEventListener("click", (el) => {
     if (el.target.id === "delete-project"){
         deleteProject.removeProject(el);
-        console.log(addProject.mainArr);
+       
     }
 })
