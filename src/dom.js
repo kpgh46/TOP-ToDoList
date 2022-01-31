@@ -24,7 +24,7 @@ let dom = (() => {
         return div;
     };
 
-    let createToDoDiv = (task, description,duedate,priority,complete) => {
+    let createToDoDiv = (task, duedate,description,priority,complete) => {
         let todoDiv = document.createElement('div');
         todoDiv.classList.add("todo-div");
         
@@ -74,6 +74,7 @@ let dom = (() => {
     let render = () => {    
         clearPage(projectList);
         clearPage(todoList);
+        console.log(addProject.currentID);
         
         addProject.mainArr.forEach(project => {
             dom.appendProjectDiv(dom.createProjectDiv(project.title, project.id));
@@ -82,7 +83,7 @@ let dom = (() => {
         addProject.mainArr.forEach(item => {
             if (item.id === Number(addProject.currentID)){
                 for(let i = 0; i <= item.tasks.length; i++){
-                appendToDoDiv(createToDoDiv(item.tasks[i].task,item.tasks[i].description, item.tasks[i].duedate, item.tasks[i].priority, item.tasks[i].completed));
+                appendToDoDiv(createToDoDiv(item.tasks[i].task, item.tasks[i].duedate, item.tasks[i].description, item.tasks[i].priority, item.tasks[i].completed));
                 }
             }
         })
