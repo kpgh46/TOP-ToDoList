@@ -35,14 +35,14 @@ let dom = (() => {
         let todoPriority = document.createElement('div')
         let todoComplete = document.createElement('div');
 
-        let todoInformationArray = [todoDescription,todoDueDate,todoPriority,todoComplete];
+        let todoInformationArray = [todoTask, todoDescription,todoDueDate,todoPriority,todoComplete];
 
         todoInformationArray.forEach(item => {
             item.classList.add("todoInfo");
             todoDiv.appendChild(item);
         });
 
-        todoTask.textContent = task;
+        todoTask.textContent = task;    
         todoDescription.textContent = description;
         todoDueDate.textContent = duedate;
         todoPriority.textContent = priority;
@@ -72,11 +72,14 @@ let dom = (() => {
         clearPage(projectList);
         addProject.mainArr.forEach(project => {
             dom.appendProjectDiv(dom.createProjectDiv(project.title, project.id));
-            project.tasks.forEach(task => {
+            if (project.id === addProject.currentID){
+                clearPage(todoList);
+                project.tasks.forEach(task => {
                 appendToDoDiv(createToDoDiv(task.task,task.description, task.duedate, task.priority,task.completed));
             })
+        }
         });
- 
+        
     };
 
     return {createProjectDiv, appendProjectDiv, render}

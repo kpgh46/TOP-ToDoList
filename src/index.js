@@ -1,8 +1,9 @@
 import './style.css';
 import { projectConstructor } from './projectConstructor';
 import { dom } from './dom.js';
-import { addProject, mainArr} from './addProject';
-import { deleteProject } from './deleteproject'
+import { addProject, mainArr, currentID} from './addProject';
+import { deleteProject } from './deleteproject';
+import { clickProject } from './clickEvents'
 
 //Default Project
 let defaultProject = projectConstructor("Default");
@@ -10,7 +11,7 @@ defaultProject.tasks.push({task: "Yard Work", description: "cut the grass", dued
 defaultProject.tasks.push({task: "Grocery", description: "pick up food and cook", duedate: "this weekend", priority: "high", completed: "yes"})
 addProject.pushToMainArr(defaultProject);
 
-
+let projectLists = document.querySelector("#project-list")
 dom.render();
 console.log(addProject.mainArr)
 
@@ -24,9 +25,18 @@ document.addEventListener("click", (el) => {
     }
 })
 
+// Delete Project Button on main page
 document.addEventListener("click", (el) => {
     if (el.target.id === "delete-project"){
         deleteProject.removeProject(el);
        
+    }
+})
+
+//Select Project with mouse
+projectLists.addEventListener("click", (el) => {
+    if (el.target.classList.contains("project-div")){
+        addProject.currentID = el.target.dataset.id;
+        dom.render();    
     }
 })
