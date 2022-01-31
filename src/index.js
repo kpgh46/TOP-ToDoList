@@ -12,7 +12,7 @@ defaultProject.tasks.push({task: "Grocery", description: "pick up food and cook"
 addProject.pushToMainArr(defaultProject);
 
 let projectLists = document.querySelector("#project-list")
-dom.render();
+
 console.log(addProject.mainArr)
 
 
@@ -36,7 +36,11 @@ document.addEventListener("click", (el) => {
 //Select Project with mouse
 projectLists.addEventListener("click", (el) => {
     if (el.target.classList.contains("project-div")){
-        addProject.currentID = el.target.dataset.id;
-        dom.render();    
+        let t = el.target.dataset.id;
+        
+        addProject.currentID = t;
+        dom.render();
     }
 })
+
+dom.render();

@@ -34,7 +34,7 @@ let addProject = (() => {
     let addProjectToList = () => {
         let newProject = projectConstructor(getProjectName());
         pushToMainArr(newProject);
-        currentID = newProject.id;
+        // currentID = newProject.id;
         resetInputValue(projectNameValue);
         dom.render();
         

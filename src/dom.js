@@ -11,7 +11,7 @@ let dom = (() => {
         div.classList.add("project-div");
         div.textContent = title;
         div.dataset.id = id;
-        addProject.currentID = id;
+        // addProject.currentID = id;
 
         let deletebtn = document.createElement('button');
         deletebtn.textContent = "X";
@@ -58,7 +58,6 @@ let dom = (() => {
     }
 
     let appendProjectDiv = (div) => {
-
         projectList.appendChild(div);
     };
 
@@ -70,19 +69,23 @@ let dom = (() => {
 
     let render = () => {    
         clearPage(projectList);
+        clearPage(todoList);
+        
         addProject.mainArr.forEach(project => {
             dom.appendProjectDiv(dom.createProjectDiv(project.title, project.id));
-            if (project.id === addProject.currentID){
-                clearPage(todoList);
-                project.tasks.forEach(task => {
-                appendToDoDiv(createToDoDiv(task.task,task.description, task.duedate, task.priority,task.completed));
-            })
-        }
-        });
+        })
+
+        addProject.mainArr.forEach(item => {
+            if (item.id === Number(addProject.currentID)){
+                for(let i = 0; i <= item.tasks.length; i++){
+                appendToDoDiv(createToDoDiv(item.tasks[i].task,item.tasks[i].description, item.tasks[i].duedate, item.tasks[i].priority, item.tasks[i].completed));
+                }
+            }
+        })
         
     };
 
-    return {createProjectDiv, appendProjectDiv, render}
+    return {createProjectDiv, appendProjectDiv, render }
 })();
 
 export {dom};
