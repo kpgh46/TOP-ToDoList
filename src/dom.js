@@ -28,12 +28,16 @@ let dom = (() => {
         let todoDiv = document.createElement('div');
         todoDiv.classList.add("todo-div");
         
-        
-        let todoTask = document.createElement('div')
+        let todoTask = document.createElement('div');
+        todoTask.id = "todo-task"
         let todoDescription = document.createElement('div')
+        todoDescription.id = "todo-description"
         let todoDueDate = document.createElement('div')
-        let todoPriority = document.createElement('div')
+        todoDueDate.id = "todo-duedate"
+        let todoPriority = document.createElement('div');
+        todoPriority.id = "todo-priority"
         let todoComplete = document.createElement('div');
+        todoComplete.id = "todo-complete"
 
         let todoInformationArray = [todoTask, todoDescription,todoDueDate,todoPriority,todoComplete];
 
@@ -44,7 +48,7 @@ let dom = (() => {
 
         todoTask.textContent = task;    
         todoDescription.textContent = description;
-        todoDueDate.textContent = duedate;
+        todoDueDate.textContent = `Due: ${duedate}`;
         todoPriority.textContent = priority;
         todoComplete.textContent = complete;
 

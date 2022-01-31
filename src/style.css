@@ -67,18 +67,18 @@ header {
     display: flex;
     align-items: center;
     
-};
+}
 
 .delete-btn {
     border:none;
-    color: black;
+    color: green;
     height: 20px;
     width: 20px;
     margin-left: 5px;
     margin-top: 4px;
     font-size: xx-small;
     background-color: #F4F4F4;
-};
+}
 
 
 button:hover {
@@ -92,4 +92,20 @@ button.delete-btn:hover {
 
 #project-entry {
     height: 20px;
+}
+
+.todo-div {
+    position: relative;
+    border: 1px solid green;
+}
+
+#todo-task {
+    font-size: 32px;
+}
+
+#todo-duedate {
+    color:red;
+    position: absolute;
+    right: 30px;
+    top: 8px;
 }

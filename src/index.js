@@ -7,8 +7,8 @@ import { clickProject } from './clickEvents'
 
 //Default Project
 let defaultProject = projectConstructor("Default");
-defaultProject.tasks.push({task: "Yard Work", description: "cut the grass", duedate: "today", priority: "medium", completed: "no"})
-defaultProject.tasks.push({task: "Grocery", description: "pick up food and cook", duedate: "this weekend", priority: "high", completed: "yes"})
+defaultProject.tasks.push({task: "Yard Work", description: "cut the grass", duedate: "Feb-12-22", priority: "medium", completed: "no"})
+defaultProject.tasks.push({task: "Grocery", description: "pick up food and cook", duedate: "Mar-17-22", priority: "high", completed: "yes"})
 addProject.pushToMainArr(defaultProject);
 
 let projectLists = document.querySelector("#project-list")
@@ -36,9 +36,8 @@ document.addEventListener("click", (el) => {
 //Select Project with mouse
 projectLists.addEventListener("click", (el) => {
     if (el.target.classList.contains("project-div")){
-        let t = el.target.dataset.id;
         
-        addProject.currentID = t;
+        addProject.currentID = el.target.dataset.id;
         dom.render();
     }
 })
