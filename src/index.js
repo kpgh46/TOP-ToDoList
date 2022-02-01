@@ -3,7 +3,8 @@ import { projectConstructor } from './projectConstructor';
 import { dom } from './dom.js';
 import { addProject, mainArr, currentID} from './addProject';
 import { deleteProject } from './deleteproject';
-import { addTodo } from './addtodo'
+import { addTodo } from './addtodo';
+
 
 
 //Default Project
@@ -45,6 +46,12 @@ projectLists.addEventListener("click", (el) => {
 document.addEventListener("click", (el) => {
     if (el.target.id === "add-todo-btn"){
         addTodo.clickTodoButton();
+    }
+});
+
+document.addEventListener("click", (el) => {
+    if(el.target.id === "submit-todo"){
+        addTodo.createTodoObject();
     }
 })
 

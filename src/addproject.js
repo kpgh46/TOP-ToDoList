@@ -16,12 +16,12 @@ let addProject = (() => {
         }
     }
 
-    let getProjectName = () => {
+    let getValue = (inputField) => {
         
-        if (projectNameValue.value === ""){
-            checkIfEmpty(projectNameValue)
+        if (inputField.value === ""){
+            checkIfEmpty(inputField)
         } else {
-            return projectNameValue.value;
+            return inputField.value;
         };
     }
     
@@ -32,7 +32,7 @@ let addProject = (() => {
     };
 
     let addProjectToList = () => {
-        let newProject = projectConstructor(getProjectName());
+        let newProject = projectConstructor(getValue(projectNameValue));
         pushToMainArr(newProject);
         currentID = newProject.id;
         resetInputValue(projectNameValue);
@@ -40,7 +40,7 @@ let addProject = (() => {
         
     }
 
-    return {pushToMainArr, addProjectToList, checkIfEmpty, mainArr, resetInputValue, currentID}
+    return {pushToMainArr, addProjectToList, checkIfEmpty, mainArr, resetInputValue, currentID, getValue}
 })();
 
 export {addProject};
