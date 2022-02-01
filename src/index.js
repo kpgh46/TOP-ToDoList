@@ -3,7 +3,8 @@ import { projectConstructor } from './projectConstructor';
 import { dom } from './dom.js';
 import { addProject, mainArr, currentID} from './addProject';
 import { deleteProject } from './deleteproject';
-import { clickProject } from './clickEvents'
+import { addTodo } from './addtodo'
+
 
 //Default Project
 let defaultProject = projectConstructor("Default");
@@ -36,9 +37,14 @@ document.addEventListener("click", (el) => {
 //Select Project with mouse
 projectLists.addEventListener("click", (el) => {
     if (el.target.classList.contains("project-div")){
-        
         addProject.currentID = el.target.dataset.id;
         dom.render();
+    }
+})
+
+document.addEventListener("click", (el) => {
+    if (el.target.id === "add-todo-btn"){
+        addTodo.clickTodoButton();
     }
 })
 

@@ -24,6 +24,8 @@ header {
     display: flex;
     width: 1008px;
     border: 1px solid red;
+    height: 600px;
+    position: relative;
 }
 
 #left {
@@ -108,4 +110,26 @@ button.delete-btn:hover {
     position: absolute;
     right: 30px;
     top: 8px;
+}
+
+#todo-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;  
+    height: 300px;
+    width: 375px;
+    margin: -150px 0 0 -187px;
+    border: 1px solid green;
+    display: none;
+}
+
+#add-todo-header {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 12px;
+    background-color: lightsteelblue;
+    align-items: center;
+    color:white;
+    margin-top: 0;
+    height: 45px;
 }
