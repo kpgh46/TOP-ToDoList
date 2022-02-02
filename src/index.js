@@ -15,8 +15,6 @@ addProject.pushToMainArr(defaultProject);
 
 let projectLists = document.querySelector("#project-list")
 
-console.log(addProject.mainArr)
-
 
 //All Event Listeners
 
@@ -43,12 +41,14 @@ projectLists.addEventListener("click", (el) => {
     }
 })
 
+//Main Add To Do button
 document.addEventListener("click", (el) => {
     if (el.target.id === "add-todo-btn"){
         addTodo.clickTodoButton();
     }
 });
 
+//submitting from Todo Div
 document.addEventListener("click", (el) => {
     if(el.target.id === "submit-todo"){
         addTodo.pushToDo();

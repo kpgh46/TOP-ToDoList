@@ -28,10 +28,13 @@ let addTodo = (() => {
         return addProject.getValue(prioritytodo)
     };
 
-    // let createTodoObject = () => {
-    //     let testTodo = todoConstructor(getTaskTodo(),getDescriptionTodo(),getDueDateTodo(),getPriorityTodo());
-    //     console.log(testTodo);
-    // };
+    let resetTodoDiv = () => {
+        todoBox.style.display = "none";
+        addProject.resetInputValue(tasktodo)
+        addProject.resetInputValue(descriptiontodo)
+        addProject.resetInputValue(duedatetodo)
+        addProject.resetInputValue(prioritytodo)
+    }
 
     let pushToDo = () => {
         let newTodo = todoConstructor(getTaskTodo(),getDescriptionTodo(),getDueDateTodo(),getPriorityTodo());
@@ -42,10 +45,9 @@ let addTodo = (() => {
             }
         });
 
-        todoBox.style.display = "none";
+        resetTodoDiv();
         dom.render();
         
-        console.log(addProject.mainArr);
     }
 
 
