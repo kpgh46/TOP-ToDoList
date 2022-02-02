@@ -13,7 +13,8 @@ defaultProject.tasks.push({task: "Yard Work", description: "cut the grass", dued
 defaultProject.tasks.push({task: "Grocery", description: "pick up food and cook", duedate: "Mar-17-22", priority: "high", completed: "yes"})
 addProject.pushToMainArr(defaultProject);
 
-let projectLists = document.querySelector("#project-list")
+let projectLists = document.querySelector("#project-list");
+let todoSection = document.querySelector("#todo-section")
 
 
 //All Event Listeners
@@ -52,6 +53,13 @@ document.addEventListener("click", (el) => {
 document.addEventListener("click", (el) => {
     if(el.target.id === "submit-todo"){
         addTodo.pushToDo();
+    }
+})
+
+todoSection.addEventListener("click", (el) => {
+    if (el.target.className = 'details-button'){
+        addTodo.showToDoDetails(el);
+        
     }
 })
 

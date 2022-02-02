@@ -68,6 +68,7 @@ header {
     font-size: 25px;
     display: flex;
     align-items: center;
+
     
 }
 
@@ -99,16 +100,33 @@ button.delete-btn:hover {
 .todo-div {
     position: relative;
     border: 1px solid green;
+    max-height: 40px;
+    overflow: hidden;
+}
+
+.visible {
+    position: relative;
+    border: 1px solid green;
+    max-height: 240px;
+    overflow: visible;
 }
 
 #todo-task {
-    font-size: 32px;
+    font-size: 22px;
+    padding-top: 10px;
+    padding-left: 8px;
 }
 
 #todo-duedate {
     color:red;
     position: absolute;
-    right: 30px;
+    right: 80px;
+    top: 12px;
+}
+
+#details-btn {
+    position: absolute;
+    right: 10px;
     top: 8px;
 }
 

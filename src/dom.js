@@ -38,6 +38,9 @@ let dom = (() => {
         todoPriority.id = "todo-priority"
         let todoComplete = document.createElement('div');
         todoComplete.id = "todo-complete"
+        let detailsbtn = document.createElement("button");
+        detailsbtn.id = "details-btn";
+        detailsbtn.classList.add('details-button')
 
         let todoInformationArray = [todoTask, todoDescription,todoDueDate,todoPriority,todoComplete];
 
@@ -51,6 +54,9 @@ let dom = (() => {
         todoDueDate.textContent = `Due: ${duedate}`;
         todoPriority.textContent = priority;
         todoComplete.textContent = complete;
+        detailsbtn.textContent = "Details";
+
+        todoDiv.appendChild(detailsbtn);
 
         return todoDiv;
         
