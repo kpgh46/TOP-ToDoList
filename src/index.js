@@ -51,7 +51,7 @@ document.addEventListener("click", (el) => {
 
 document.addEventListener("click", (el) => {
     if(el.target.id === "submit-todo"){
-        addTodo.createTodoObject();
+        addTodo.pushToDo();
     }
 })
 
