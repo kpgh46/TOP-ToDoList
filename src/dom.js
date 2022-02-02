@@ -81,11 +81,13 @@ let dom = (() => {
         })
 
         addProject.mainArr.forEach(item => {
+            if (item.tasks.length > 0){
             if (item.id === Number(addProject.currentID)){
                 for(let i = 0; i <= item.tasks.length; i++){
                 appendToDoDiv(createToDoDiv(item.tasks[i].task, item.tasks[i].duedate, item.tasks[i].description, item.tasks[i].priority, item.tasks[i].completed));
                 }
             }
+        }
         })
         
     };
