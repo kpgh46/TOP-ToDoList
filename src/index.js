@@ -56,9 +56,10 @@ document.addEventListener("click", (el) => {
     }
 })
 
+//expand todo details
 todoSection.addEventListener("click", (el) => {
-    if (el.target.className = 'details-button'){
-        addTodo.showToDoDetails(el);
+    if (el.target.className === 'details-button'){
+        document.addEventListener("click",addTodo.showToDoDetails(el));
         
     }
 })

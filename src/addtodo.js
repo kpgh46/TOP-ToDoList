@@ -11,7 +11,6 @@ let addTodo = (() => {
     //do I need "completed"?
 
     let clickTodoButton = () => {
-        
         todoBox.style.display = "none" ? todoBox.style.display = "block" : todoBox.style.display = "none";
     };
 
@@ -51,14 +50,8 @@ let addTodo = (() => {
     }
 
     let showToDoDetails = (el) => {
-        let toDoDiv = document.querySelector(".todo-div");
-        
         el.target.parentElement.classList.toggle("visible");
-        
     }
-
-
-    
 
     return { clickTodoButton, pushToDo, showToDoDetails};
 
