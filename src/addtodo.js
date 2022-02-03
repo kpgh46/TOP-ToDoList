@@ -62,7 +62,7 @@ let addTodo = (() => {
             if (project.id === Number(addProject.currentID)){
                 project.tasks.forEach(task => {
                     if (el.id === task.task){
-                        task.completed = "yes"
+                        task.completed = !task.completed
                     }
                 })
             }

@@ -9,8 +9,8 @@ import { addTodo } from './addtodo';
 //Default Project
 
 let defaultProject = projectConstructor("Default");
-defaultProject.tasks.push({task: "Yard Work", description: "cut the grass", duedate: "Feb-12-22", priority: "medium", completed: "no"})
-defaultProject.tasks.push({task: "Grocery", description: "pick up food and cook", duedate: "Mar-17-22", priority: "high", completed: "no"})
+defaultProject.tasks.push({task: "Yard Work", description: "cut the grass", duedate: "Feb-12-22", priority: "medium", completed: false})
+defaultProject.tasks.push({task: "Grocery", description: "pick up food and cook", duedate: "Mar-17-22", priority: "high", completed: false})
 addProject.pushToMainArr(defaultProject);
 
 let projectLists = document.querySelector("#project-list");
