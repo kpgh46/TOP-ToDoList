@@ -71,6 +71,7 @@ let dom = (() => {
         todoDivDetails.appendChild(todoDescription)
         todoDivDetails.appendChild(todoDueDate)
         todoDivDetails.appendChild(todoPriority)
+        todoDivDetails.appendChild(todoComplete);
 
         todoDiv.appendChild(todoTask);
         todoDiv.appendChild(todoDivDetails);
@@ -106,6 +107,7 @@ let dom = (() => {
         })
 
         addProject.mainArr.forEach(item => {
+            console.log(addProject.mainArr);
             if (item.tasks.length > 0){
             if (item.id === Number(addProject.currentID)){
                 for(let i = 0; i <= item.tasks.length; i++){

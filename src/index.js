@@ -10,7 +10,7 @@ import { addTodo } from './addtodo';
 
 let defaultProject = projectConstructor("Default");
 defaultProject.tasks.push({task: "Yard Work", description: "cut the grass", duedate: "Feb-12-22", priority: "medium", completed: "no"})
-defaultProject.tasks.push({task: "Grocery", description: "pick up food and cook", duedate: "Mar-17-22", priority: "high", completed: "yes"})
+defaultProject.tasks.push({task: "Grocery", description: "pick up food and cook", duedate: "Mar-17-22", priority: "high", completed: "no"})
 addProject.pushToMainArr(defaultProject);
 
 let projectLists = document.querySelector("#project-list");
@@ -61,6 +61,12 @@ todoSection.addEventListener("click", (el) => {
     if (el.target.className === 'details-button'){
         document.addEventListener("click",addTodo.showToDoDetails(el));
         
+    }
+});
+
+document.addEventListener("click", (el) => {
+    if (el.target.type === "checkbox"){
+        addTodo.toggleComplete(el);
     }
 })
 

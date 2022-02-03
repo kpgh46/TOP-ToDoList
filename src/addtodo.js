@@ -55,7 +55,26 @@ let addTodo = (() => {
         // document.querySelector(".todo-details").style.transition = "opacity 3s";
     }
 
-    return { clickTodoButton, pushToDo, showToDoDetails};
+    let toggleComplete = (e) => {
+        let el = e.target;
+
+        addProject.mainArr.forEach(project => {
+            if (project.id === Number(addProject.currentID)){
+                project.tasks.forEach(task => {
+                    if (el.id === task.task){
+                        task.completed = "yes"
+                    }
+                })
+            }
+        })
+
+        console.log(addProject.mainArr);
+
+    }
+
+
+
+    return { clickTodoButton, pushToDo, showToDoDetails, toggleComplete};
 
 })();
 
