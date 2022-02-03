@@ -160,7 +160,7 @@ button.delete-btn:hover {
   
 }
 
-label {
+.strike {
     position: absolute;
     font-size: 22px;
     padding-top: 10px;
@@ -172,4 +172,8 @@ label {
 .todo-checkbox {
     position: absolute;
     top:15px;
+}
+
+.through {
+    text-decoration: line-through;
 }

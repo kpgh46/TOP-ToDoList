@@ -8,7 +8,6 @@ let addTodo = (() => {
     let descriptiontodo = document.querySelector("#task-description");
     let duedatetodo = document.querySelector("#task-duedate");
     let prioritytodo = document.querySelector("#task-priority");
-    //do I need "completed"?
 
     let clickTodoButton = () => {
         todoBox.style.display = "none" ? todoBox.style.display = "block" : todoBox.style.display = "none";
@@ -46,13 +45,11 @@ let addTodo = (() => {
 
         resetTodoDiv();
         dom.render();
-        
     }
 
     let showToDoDetails = (el) => {
         el.target.parentElement.classList.toggle("visible");
-        // document.querySelector(".todo-details").style.opacity = "1";
-        // document.querySelector(".todo-details").style.transition = "opacity 3s";
+
     }
 
     let toggleComplete = (e) => {
@@ -68,8 +65,7 @@ let addTodo = (() => {
             }
         })
 
-        console.log(addProject.mainArr);
-
+        dom.render();
     }
 
 

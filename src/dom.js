@@ -11,7 +11,6 @@ let dom = (() => {
         div.classList.add("project-div");
         div.textContent = title;
         div.dataset.id = id;
-        // addProject.currentID = id;
 
         let deletebtn = document.createElement('button');
         deletebtn.textContent = "X";
@@ -25,6 +24,7 @@ let dom = (() => {
     };
 
     let createToDoDiv = (task, duedate,description,priority,complete) => {
+        //div for each todo
         let todoDiv = document.createElement('div');
         todoDiv.classList.add("todo-div");
         let todoDivDetails = document.createElement('div');
@@ -37,11 +37,18 @@ let dom = (() => {
         todoTask.id = task;
         todoTask.classList.add("todo-checkbox")
 
+        //label
         let taskLabel = document.createElement('label');
         taskLabel.htmlFor = task;
         taskLabel.appendChild(document.createTextNode(task));
-        
+        taskLabel.classList.add("strike");
 
+        //if checked logic
+        if (complete){
+            taskLabel.classList.add("through");
+            todoTask.checked = true;
+        }
+        
         //other todo div details:
         let todoDescription = document.createElement('div')
         todoDescription.id = "todo-description"
@@ -57,22 +64,25 @@ let dom = (() => {
 
         let todoInformationArray = [todoTask, todoDescription,todoDueDate,todoPriority,todoComplete];
 
+        //add class to all todos
         todoInformationArray.forEach(item => {
             item.classList.add("todoInfo");
         });
 
-           
+        //text content
         todoDescription.textContent = description;
         todoDueDate.textContent = `Due: ${duedate}`;
         todoPriority.textContent = priority;
         todoComplete.textContent = complete;
         detailsbtn.textContent = "Details";
 
+        //append todoDetails section
         todoDivDetails.appendChild(todoDescription)
         todoDivDetails.appendChild(todoDueDate)
         todoDivDetails.appendChild(todoPriority)
         todoDivDetails.appendChild(todoComplete);
 
+        //append everything to main todoDiv
         todoDiv.appendChild(todoTask);
         todoDiv.appendChild(todoDivDetails);
         todoDiv.appendChild(detailsbtn);
@@ -100,14 +110,14 @@ let dom = (() => {
     let render = () => {    
         clearPage(projectList);
         clearPage(todoList);
-        console.log(addProject.currentID);
         
+        //render project list
         addProject.mainArr.forEach(project => {
             dom.appendProjectDiv(dom.createProjectDiv(project.title, project.id));
         })
 
+        //render todo list
         addProject.mainArr.forEach(item => {
-            console.log(addProject.mainArr);
             if (item.tasks.length > 0){
             if (item.id === Number(addProject.currentID)){
                 for(let i = 0; i <= item.tasks.length; i++){
