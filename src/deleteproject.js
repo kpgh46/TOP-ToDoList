@@ -21,14 +21,11 @@ let deleteProject = (() => {
         }
     };
     
-
     let deleteFromMainArr = (index) => {
         
         addProject.mainArr.splice(index,1);
         
     };
-
-    
 
     let removeProject = (el) => {
         deleteProjectDiv(el);

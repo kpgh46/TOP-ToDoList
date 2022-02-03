@@ -51,6 +51,8 @@ let addTodo = (() => {
 
     let showToDoDetails = (el) => {
         el.target.parentElement.classList.toggle("visible");
+        // document.querySelector(".todo-details").style.opacity = "1";
+        // document.querySelector(".todo-details").style.transition = "opacity 3s";
     }
 
     return { clickTodoButton, pushToDo, showToDoDetails};

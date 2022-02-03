@@ -27,9 +27,22 @@ let dom = (() => {
     let createToDoDiv = (task, duedate,description,priority,complete) => {
         let todoDiv = document.createElement('div');
         todoDiv.classList.add("todo-div");
+        let todoDivDetails = document.createElement('div');
+        todoDivDetails  .classList.add("todo-details");
+
+        //checkbox
+        let todoTask = document.createElement('input');
+        todoTask.type = "checkbox";
+        todoTask.name = 'task';
+        todoTask.id = task;
+        todoTask.classList.add("todo-checkbox")
+
+        let taskLabel = document.createElement('label');
+        taskLabel.htmlFor = task;
+        taskLabel.appendChild(document.createTextNode(task));
         
-        let todoTask = document.createElement('div');
-        todoTask.id = "todo-task"
+
+        //other todo div details:
         let todoDescription = document.createElement('div')
         todoDescription.id = "todo-description"
         let todoDueDate = document.createElement('div')
@@ -46,17 +59,23 @@ let dom = (() => {
 
         todoInformationArray.forEach(item => {
             item.classList.add("todoInfo");
-            todoDiv.appendChild(item);
         });
 
-        todoTask.textContent = task;    
+           
         todoDescription.textContent = description;
         todoDueDate.textContent = `Due: ${duedate}`;
         todoPriority.textContent = priority;
         todoComplete.textContent = complete;
         detailsbtn.textContent = "Details";
 
+        todoDivDetails.appendChild(todoDescription)
+        todoDivDetails.appendChild(todoDueDate)
+        todoDivDetails.appendChild(todoPriority)
+
+        todoDiv.appendChild(todoTask);
+        todoDiv.appendChild(todoDivDetails);
         todoDiv.appendChild(detailsbtn);
+        todoDiv.appendChild(taskLabel)
 
         return todoDiv;
         
